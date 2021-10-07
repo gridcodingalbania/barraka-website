@@ -1,0 +1,156 @@
+@media only screen and (max-width:768px){
+    /*Navbar*/
+    .navbar-nav {
+        height: 100vh !important;
+    }
+    .navbar{
+        background-color: black !important;
+        color: white;
+    }
+    .navbar-mid{
+        display: none;
+    }
+    .navbar-left{
+        display: flex;
+    }
+    .navbar-left img{
+        width: 15vh;
+    }
+    .nav-item{
+        padding: 20px;
+        font-size: 25px;
+    }
+    .dropdown-menu{
+        background-color: #DE9E48;
+        width: 70%;
+    }
+    .dropdown-item{
+        color: white;
+    }
+    .navbar-social{
+        display: none;
+    }
+    /*Banner*/
+    .banner-content h3{
+        font-size: 32px;
+        padding-bottom: 20px;
+
+    } 
+    .video_arrow{
+        display: none;
+    }
+
+    img.play-button{
+        width: 100px !important;
+        height: 100px !important; 
+    }
+
+    /*Home page*/
+     /*Home Page*/
+
+     .left-home{
+        margin-left: 0 !important;
+    }
+    .home-image{
+        margin-left: 0 !important;
+        text-align: center;
+    }
+    .home-title{
+        font-size: 15px;
+    }
+    .home-subtitle{
+        font-size: 25px;
+    }
+    .about_img{
+        /* width: 200px; */
+        display: none;
+    }
+    .home_text p{
+        width: 200%;
+        font-size: 20px;
+    }
+    .portfolio_videos{
+        margin-left: 0 !important;
+        width: 100%;
+    }
+    .reel-video-sub-image{
+        width: 695px !important;
+        height: 350px;
+    }
+    .reel-video-portfolio-image{
+        width: 730px !important;
+        height: 300px;
+    }
+
+    /*Footer*/
+    .row-fixer{
+        display: flex !important;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        flex-direction: row !important;
+    }
+    .footer_image img{
+        transform: translateX(120px);
+    }
+    .footer_text{
+        padding-left: unset;
+    }
+
+    /*Details Page*/
+
+    .details-wrapper{
+        padding-left: unset !important;
+        padding-right: unset !important;
+    }
+
+    /*Contact Page*/
+
+    .contact-banner img{
+        height: 150vh;
+    }
+
+    .contact-arrow{
+        display: none;
+    }
+
+    /*About Page*/
+
+    .about-second-content-row{
+        flex-direction: column !important;
+    }
+    .left-about{
+        width: 700px !important;
+    }
+    .about-image img{
+        margin-left: 220px !important;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+    .about-row{
+        width: 650px !important;
+    }
+    .about-other-services-row{
+        flex-direction: column !important;
+    }
+    .other-card{
+        width: 675px !important;
+    }
+    .services-row{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-description p{
+        width: 750px !important;
+    }
+    .card-col{
+        padding-bottom: 30px;
+    }
+    .about-description-second p{
+        width: 100% !important;
+    }
+    .card{
+        width: unset;
+    }
+}
+

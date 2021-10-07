@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block content %}
+
+<div class="detail-big-image-section">
+<div class="container">
+    <div class="detail-title text-center">
+        <h2>{{ self.detail_title }}</h2>
+        <div class="detail-subtitle text-center">
+            <h5>{{ self.detail_subtitle }}</h5>
+        </div>
+    </div>
+
+    <div class="detail-description">
+        {{self.detail_big_image_description|richtext}}
+    </div>
+</div>
+<div class="container">
+    <div class="detail-big-image">
+        <div class="reel-video">
+            {% image self.detail_big_image scale-100 as img %}
+            <img src="{{ img.url }}" alt="{{ img.alt }}" class="reel-video-image">
+                <div class="play-button-wrapper">
+                    <div title="Play video" class="play-gif" id="circle-play-b">
+                        <img src="/media/original_images/playbutton.png" class="play-button" data-toggle="modal" data-target="{{ self.detail_big_image_video_target }}">
+                    </div>
+                </div>
+        </div>
+        <div class="modal fade" id="{{self.big_image_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <iframe width="560" height="315" src="{{ self.detail_big_image_video_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="detail-big-image-title">
+            <h3>{{ self.detail_big_image_title }}</h3>
+        </div>
+        <div class="detail-big-image-description">
+            {{ self.detail_big_image_description|richtext }}
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="details-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+                {% for block in page.detail_content %}
+                    {% if block.block_type == "Detail" %}
+                <div class="col-lg-4">
+                    <div class="reel-video">
+                        {% image block.value.detail_video_image scale-100 as img %}
+                        <img src="{{img.url}}" alt="{{img.alt}}" class="reel-video-portfolio-image">
+
+                        <div class="play-button-wrapper">
+                            <div title="Play video" class="play-gif" id="circle-play-b">
+                                <img src="/media/original_images/playbutton.png" class="play-button" data-toggle="modal" data-target={{block.value.detail_video_target}}>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="video-title">
+                        <h2>{{ block.value.detail_video_title }}</h2>
+                    </div>
+                    <div class="video-description">
+                        <p>{{ block.value.detail_video_description }}</p>
+                    </div>
+
+                    <div class="modal fade" id={{block.value.detail_video_id}} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body text-center">
+                                <iframe width="800" height="500" src={{block.value.detail_video_link}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+    </div>
+
+</section>
+
+
+
+{% block extra_js %}
+<script>
+    
+    $('.owl-carousel').owlCarousel({
+      margin: 15,
+      touchDrag  : false,
+      mouseDrag  : false,
+      nav: true,
+      video:true,
+      modal:true,
+      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+
+</script>
+{% endblock %}
+
+
+{% endblock %}
+
+
+
+  

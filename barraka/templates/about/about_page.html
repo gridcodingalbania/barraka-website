@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block content %}
+
+<div class="about_header">
+    <div class="container">
+        <div class="text-center header-wrapper">
+            <div class="about-title">
+                <h2>{{ self.about_title }}</h2>
+            </div>
+            <div class="about-subtitle">
+                <h5>{{ self.about_subtitle }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="about-second-content">
+    <div class="container-fluid">
+        <div class="row about-second-content-row">
+            <div class="col-lg-6 col-md-3 col-sm-3 col-xs-3 col-xl-6">
+                <div class="left-home left-about">
+                    <div class="white-about-title">
+                    <h2>{{ self.first_about_title }}</h2>
+                    </div>
+                    <div class="about-description">
+                        {{ self.first_about_description|richtext }}
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-6 col-md-3 col-sm-3 col-xs-3 col-xl-6">
+                <div class="about-image">
+                    {% image self.first_about_image scale-100 as img %}
+                    <img src="{{ img.url }}" alt="{{ img.alt }}" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-6 col-sm-6 col-xs-6 col-xl-12">
+                <div class="reel-title text-center about-row">
+                    <h2 class="home-title">{{ self.second_about_title }}</h2>
+                    <div class="reel-subtitle text-uppercase">
+                        <h3>{{ self.second_about_subtitle }}</h3>
+                    </div>
+                    <div class="about-description-second">
+                        {{ self.second_about_description|richtext }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <div class="container-fluid">
+        <div class="row services-row">
+            {% for block in page.services_content %}
+                {% if block.block_type == "services" %}
+                <div class="col-lg-4 card-col">
+                    <div class="card">
+                        {% image block.value.service_image scale-100 as img %}
+                        <img src="{{ img.url }}" alt="img.alt" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ block.value.service_title }}</h5>
+                            <p class="card-text">{{ block.value.service_description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="other-services">
+   
+    <div class="container-fluid">
+        <div class="other-services-header">
+            <h2>{{ self.third_about_title }}</h2>
+        </div>
+        <div class="row about-other-services-row">
+            {% for block in page.other_services_content %}
+                {% if block.block_type == "other_services" %}
+                    <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2 col-xl-4 other-card-col">
+                        <div class="card other-card">
+                            {% image block.value.service_image scale-100 as img %}
+                            <img src="{{ img.url }}" alt="img.alt" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h5 class="card-title other-card-title">{{ block.value.service_title }}</h5>
+                                <p class="card-text other-card-txt">{{ block.value.service_description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}   
+        </div>
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block content %}
+
+    <div class="container-fluid">
+    <div class="text-center d-flex align-items-center justify-content-center h-100">
+    <p>
+        {{ self.thank_you_text|richtext}}
+    </p>
+    </div>
+    </div>
+    
+
+{% endblock %}
