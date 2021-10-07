@@ -1,35 +1,8 @@
 @media only screen and (max-width:1024px){
-    /* Navbar
-    .navbar-nav {
-        height: 100vh !important;
+    
+    li.nav-item::marker{
+        color: transparent;
     }
-    .navbar{
-        background-color: black !important;
-        color: white;
-    }
-    .navbar-mid{
-        display: none;
-    }
-    .navbar-left{
-        display: flex;
-    }
-    .navbar-left img{
-        width: 15vh;
-    }
-    .nav-item{
-        padding: 20px;
-        font-size: 25px;
-    }
-    .dropdown-menu{
-        background-color: #DE9E48;
-        width: 70%;
-    }
-    .dropdown-item{
-        color: white;
-    }
-    .navbar-social{
-        display: none;
-    } */
     /*Banner*/
     .banner-content h3{
         font-size: 32px;
@@ -73,7 +46,7 @@
         margin-left: 0 !important;
         width: 100%;
     }
-    .reel-video-sub-image{
+    .sub-image{
         width: 450px;
         height: 350px;
     }
@@ -119,18 +92,21 @@
     .about-second-content-row{
         flex-direction: column;
     }
-    .left-about{
-        width: 1000px;
+    .about-second-content-col{
+        max-width: 90%;
     }
+    /* .left-about{
+        width: 1000px;
+    } */
     .about-image img{
         margin-left: 350px;
         margin-top: 0;
         margin-bottom: 50px;
     }
-    .about-row{
+    /* .about-row{
         width: 650px;
         text-align: left !important;
-    }
+    } */
     .about-other-services-row{
         flex-direction: row;
     }
@@ -140,19 +116,19 @@
     .other-card-col{
         padding:0;
         padding-bottom: 50px;
-        padding-right: 50px;
-        padding-left: 50px;
+        /* padding-right: 50px;
+        padding-left: 50px; */
     }
     .services-row{
         padding-left: 0;
         padding-right: 0;
     }
-    .about-description p{
+    /* .about-description p{
         width: 100%;
     }
     .about-description-second p{
         width: 950px;
-    }
+    } */
     .card-col{
         padding-bottom: 30px;
     }
