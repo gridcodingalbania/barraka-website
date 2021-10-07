@@ -84,7 +84,7 @@
         padding:30px;
     }
     .reel-video-image {
-        width: 100% !important;
+        width: 100%;
         height: auto !important;
     }
     .reel-video-sub-image{
@@ -92,7 +92,7 @@
         height: auto !important;
     }
     .reel-video-portfolio-image{
-        width: 100% !important;
+        /* width: 100% !important; */
         height: auto !important;
     }
     /*Owl carousel phone*/
@@ -123,6 +123,7 @@
         margin:0 auto;
         width: 200px;
         text-align: center;
+        display: none;
     }
     .services-row{
         padding-left: 0;
