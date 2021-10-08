@@ -19,7 +19,6 @@
     }
 
     /*Home page*/
-     /*Home Page*/
 
      .left-home{
         margin-left: 0 !important;
@@ -64,7 +63,7 @@
         flex-direction: row !important;
     }
     .footer_image img{
-        transform: translateX(120px);
+        transform: translateX(25px);
     }
     .footer_text{
         padding-left: unset;
@@ -80,7 +79,7 @@
     /*Contact Page*/
 
     .contact-banner img{
-        height: 150vh;
+        height: 100vh;
     }
 
     .contact-arrow{

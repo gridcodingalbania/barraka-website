@@ -6,10 +6,18 @@
         <source src="/media/videos/TestVideo.mp4" type="video/mp4">
 </video>
 <div class="banner-content">
+    <div class="navbar-social-home">
+        <li class="nav-item">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+       <li class="nav-item">
+        <a href="#"><i class="far fa-envelope"></i></a>
+        </li>
+    </div>
     <h3>{{ self.banner_text }} <span class="video-colored-text">{{ self.colored_banner_text }}</span> {{self.banner_text_after_colored}}</h3>
-    <!-- <div class="video_arrow">
-        <a href="#about"><img src="/media/original_images/video_arrow.png"></a>
-    </div> -->
 </div>
 </div>
 
@@ -59,6 +67,13 @@
             <div class="modal fade" id="{{self.reels_big_video_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="col-md-4 ml-auto">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true" style="color:white;">&times;</span>
+                        </button>
+                        </div>
+                    </div>
                     <div class="modal-body text-center">
                         <iframe width="560" height="315" src="{{ self.reels_big_video_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
@@ -90,7 +105,7 @@
                                       <span aria-hidden="true" style="color:white;">&times;</span>
                                     </button>
                                     </div>
-                                  </div>
+                                </div>
                                 <div class="modal-body text-center">
                                     <iframe width="350" height="500" src={{block.value.reel_video_link}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>
@@ -160,6 +175,13 @@
                         <div class="modal fade" id={{block.value.portfolio_video_id}} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="col-md-4 ml-auto">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true" style="color:white;">&times;</span>
+                                    </button>
+                                    </div>
+                                </div>
                                 <div class="modal-body text-center">
                                     <iframe width="800" height="500" src={{block.value.portfolio_video_link}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 </div>

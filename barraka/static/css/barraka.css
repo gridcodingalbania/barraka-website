@@ -153,14 +153,10 @@ top: 20px;
 }
 /* Modal */
 
-/* .modal-header{
-    border-bottom: none;
-}
-
 .modal-body iframe{
-    width:1000px;
-    height: 600px;
-} */
+    width:800px;
+    height: 500px;
+}
 
 
 
@@ -218,6 +214,9 @@ top: 20px;
     width: 80px;
     position: absolute;
     transform: translateX(-25px);
+}
+.navbar-social-home{
+    display: none;
 }
 .home_about{    
     background-color: #140D01;
@@ -655,6 +654,44 @@ textarea.form-control{
     padding-right: 2px;
 }
 
+/*Privacy and Terms Page*/
+.page-title h2{
+    font-size: 55px;
+    color:white;
+}
+.page-subtitle h4{
+    font-size: 15px;
+    color:#DE9E48;
+}
+.content-wrapper h2{
+    color:white;
+    font-size: 45px;
+}
+.content-wrapper h5{
+    color:white;
+    font-size: 25px;
+}
+.content-wrapper p{
+    font-size: 35px;
+}
 
+@media only screen and (max-width:1440px){
+    li.nav-item::marker{
+        color:transparent;
+    }
+    .card{
+        width: auto;
+    }
+    .footer_image{
+        transform: translateX(0px);
+    }
+    .contact-banner img{
+        height: 130vh;
+    }
+    .contact-arrow{
+        right: 125px;
+        bottom: -150px; 
+    }
+}
 
 

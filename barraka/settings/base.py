@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'about',
     'showreel',
     'contact',
+    'privacy',
+    'terms',
     'search',
 
     'wagtail.contrib.forms',

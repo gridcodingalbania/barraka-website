@@ -29,6 +29,13 @@
         <div class="modal fade" id="{{self.big_image_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col-md-4 ml-auto">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true" style="color:white;">&times;</span>
+                    </button>
+                    </div>
+                </div>
                 <div class="modal-body text-center">
                     <iframe width="560" height="315" src="{{ self.detail_big_image_video_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
@@ -50,7 +57,7 @@
 
 <section class="details-wrapper">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row details-row">
                 {% for block in page.detail_content %}
                     {% if block.block_type == "Detail" %}
                 <div class="col-lg-4">
@@ -75,6 +82,13 @@
                     <div class="modal fade" id={{block.value.detail_video_id}} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="col-md-4 ml-auto">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true" style="color:white;">&times;</span>
+                                </button>
+                                </div>
+                            </div>
                             <div class="modal-body text-center">
                                 <iframe width="800" height="500" src={{block.value.detail_video_link}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -89,36 +103,6 @@
     </div>
 
 </section>
-
-
-
-{% block extra_js %}
-<script>
-    
-    $('.owl-carousel').owlCarousel({
-      margin: 15,
-      touchDrag  : false,
-      mouseDrag  : false,
-      nav: true,
-      video:true,
-      modal:true,
-      navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 3
-        }
-      }
-    });
-
-</script>
-{% endblock %}
-
 
 {% endblock %}
 

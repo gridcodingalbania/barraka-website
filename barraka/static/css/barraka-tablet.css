@@ -47,7 +47,12 @@
 
     /*Home page*/
      /*Home Page*/
-
+     .navbar-social-home{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
      .left-home{
         margin-left: 0 !important;
     }
@@ -106,11 +111,14 @@
         padding-left: unset !important;
         padding-right: unset !important;
     }
+    .details-row{
+        text-align: center;
+    }
 
     /*Contact Page*/
 
     .contact-banner img{
-        height: 150vh;
+        height: 150vh !important;
     }
 
     .contact-arrow{
@@ -155,6 +163,12 @@
     }
     .card{
         width: unset;
+    }
+
+    /*Modals*/
+    .modal-body iframe{
+        width: 500px;
+        height: 600px;
     }
 }
 
