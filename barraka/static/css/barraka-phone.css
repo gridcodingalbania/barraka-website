@@ -214,7 +214,7 @@
         color: white;
         padding: 0;
         transform: translateX(-15px);
-        width: 108%;
+        width: 110%;
     }
     /*Contact Page*/
     .contact-banner img{
@@ -275,5 +275,7 @@
     .navbar{
         position: relative !important;
     }
-
+    .contact-row{
+        width: 100%;
+    }
 }
