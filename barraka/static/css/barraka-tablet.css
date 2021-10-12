@@ -6,6 +6,9 @@
     .navbar{
         background-color: black !important;
         color: white;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
     }
     .navbar-mid{
         display: none;
@@ -30,7 +33,15 @@
     .navbar-social{
         display: none;
     }
+    .navbar-social-phone{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 50px;
+    }
     /*Banner*/
+    .banner{
+        padding-top: 80px;
+    }
     .banner-content h3{
         font-size: 32px;
         padding-bottom: 20px;
@@ -114,16 +125,16 @@
     .details-row{
         text-align: center;
     }
+    .detail-description p{
+        width: 100%;
+    }
 
     /*Contact Page*/
 
     .contact-banner img{
-        height: 150vh !important;
+        height:110vh;
     }
 
-    .contact-arrow{
-        display: none;
-    }
 
     /*About Page*/
 
@@ -139,9 +150,9 @@
         margin-bottom: 50px; */
         display: none;
     }
-    .about-row{
+    /* .about-row{
         width: 650px;
-    }
+    } */
     /* .about-other-services-row{
         flex-direction: column !important;
     } */
@@ -153,7 +164,7 @@
         padding-right: 0;
     }
     .about-description p{
-        width: 750px;
+        width: 100%;
     }
     .card-col{
         padding-bottom: 30px;

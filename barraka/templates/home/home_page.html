@@ -6,17 +6,6 @@
         <source src="/media/videos/TestVideo.mp4" type="video/mp4">
 </video>
 <div class="banner-content">
-    <div class="navbar-social-home">
-        <li class="nav-item">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li class="nav-item">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </li>
-       <li class="nav-item">
-        <a href="#"><i class="far fa-envelope"></i></a>
-        </li>
-    </div>
     <h3>{{ self.banner_text }} <span class="video-colored-text">{{ self.colored_banner_text }}</span> {{self.banner_text_after_colored}}</h3>
 </div>
 </div>
@@ -41,7 +30,7 @@
             <div class="col-lg-6 col-md-6">
                 <div class="home-image">
                     {% image self.homePage_first_Image scale-100 as img %}
-                    <img src="{{img.url}}" width="300px" alt="{{img.alt}}" class="about_img">
+                    <img src="{{img.url}}" width="220px" alt="{{img.alt}}" class="about_img">
                 </div>
             </div>
         </div>
@@ -137,15 +126,12 @@
                 <h2 class="home-title">{{ self.homePage_third_Title }}</h2>
                 <h3 class="home-subtitle">{{ self.homePage_third_subTitle }}</h3>
                 <div class="home_text">{{ self.homePage_third_description|richtext }}</div>
-                <div class="see-more-btn">
-                    <a href="#" class="btn more-btn">See More</a>
-                </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="home-image">
                     {% image self.homePage_third_Image scale-100 as img %}
-                    <img src="{{img.url}}" alt={{img.alt}} width="300px" class="about_img">
+                    <img src="{{img.url}}" alt={{img.alt}} width="220px" class="about_img">
                 </div>
             </div>
         </div>
@@ -207,7 +193,7 @@
 
 <div class="home-contact" id="contact">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row contact-row">
             <div class="col-lg-6 col-md-6">
                 <div class="left-home">
                 <h2 class="home-title">{{ self.homePage_fourth_Title }}</h2>
@@ -216,14 +202,14 @@
                     {{self.homePage_fourth_description|richtext}}
                 </div>
                 <div class="see-more-btn">
-                    <a href="#" class="btn more-btn">See More</a>
+                    <a href="#" class="btn contact-btn">Contact <i class="fas fa-angle-right"></i> </a>
                 </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="home-image">
                     {% image self.homePage_fourth_Image scale-100 as img %}
-                    <img src="{{ img.url }}" alt="{{ img.alt }}" width="300px" class="about_img">
+                    <img src="{{ img.url }}" alt="{{ img.alt }}" width="220px" class="about_img">
                 </div>
             </div>
         </div>

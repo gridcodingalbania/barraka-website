@@ -7,6 +7,7 @@
     .banner-content h3{
         font-size: 32px;
         padding-bottom: 20px;
+        margin-left: 10px;
 
     } 
     .video_arrow{
@@ -79,12 +80,9 @@
     /*Contact Page*/
 
     .contact-banner img{
-        height: 100vh;
+        height: 110vh;
     }
 
-    .contact-arrow{
-        display: none;
-    }
 
     /*About Page*/
 
@@ -113,10 +111,11 @@
         width: 565px !important;
     } */
     .other-card-col{
-        padding:0;
-        padding-bottom: 50px;
-        /* padding-right: 50px;
-        padding-left: 50px; */
+        /* padding:0; */
+        padding:30px;
+    }
+    .other-card-title{
+        font-size: 15px;
     }
     .services-row{
         padding-left: 0;
@@ -133,6 +132,7 @@
     }
     .card{
         width: 100%;
+        height: 500px;
     }
 }
 
