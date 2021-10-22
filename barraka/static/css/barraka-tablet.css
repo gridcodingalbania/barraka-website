@@ -41,6 +41,7 @@
     /*Banner*/
     .banner{
         padding-top: 80px;
+        height: 100vh;
     }
     .banner-content h3{
         font-size: 32px;
@@ -127,6 +128,7 @@
     }
     .detail-description p{
         width: 100%;
+        font-size: 20px;
     }
 
     /*Contact Page*/

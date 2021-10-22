@@ -83,6 +83,16 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
     )
 
+    homePage_partners_title = models.CharField(max_length=200, null=True, blank=True)
+    homePage_partners_subtitle = models.CharField(max_length=200, null=True, blank=True)
+    homePage_partners_description = RichTextField(null=True, blank=False)
+
+    partners_content = StreamField([
+    ('Partners', blocks.StructBlock([
+        ('partners_logo', ImageChooserBlock(required=False)),
+    ]))
+    ],null=True,blank=False)
+
     content_panels = Page.content_panels + [
         FieldPanel("banner_text"),
         FieldPanel("colored_banner_text"),
@@ -107,4 +117,8 @@ class HomePage(Page):
         FieldPanel("homePage_fourth_subTitle"),
         FieldPanel("homePage_fourth_description"),
         ImageChooserPanel("homePage_fourth_Image"),
+        FieldPanel("homePage_partners_title"),
+        FieldPanel("homePage_partners_subtitle"),
+        FieldPanel("homePage_partners_description"),
+        StreamFieldPanel("partners_content"),
     ]
