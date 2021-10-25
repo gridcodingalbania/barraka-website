@@ -132,7 +132,9 @@
     }
 
     /*Contact Page*/
-
+    .contact-row{
+        padding-top: 100px;
+    }
     .contact-banner img{
         height:110vh;
     }
