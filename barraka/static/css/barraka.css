@@ -189,7 +189,7 @@ top: 20px;
 /* Home Video content / Home page css*/
 .banner{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -415,15 +415,43 @@ top: 20px;
 }
 .reel-video-portfolio-image{
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
 }
 .portfolio_videos{
     width: 80%;
     margin-left: 10rem;
 }
+/*Test*/
+.about-images img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(0.6);
+    margin-bottom: 50px;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center-title {
+    position: relative;
+}
+.about-images:hover .center-title{
+    padding-bottom: 20px;
+    transition: 300ms all ease-in-out;
+}
+.services-card{
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 160px;
+    margin-top: 20px;
+}
 
 .video-title h2{
     color:white;
+    text-align: center;
 }
 .contact-btn{
     border-color: #DE9E48;
@@ -575,11 +603,11 @@ top: 20px;
 .card{
     background: transparent;
     color: white;
-    border: #DE9E48;
+    border:1px solid #DE9E48;
     border-style: dashed;
-    width: 100%;
-    height: 450px;
+    /* height: 300px; */
     margin: 0 auto;
+    width: 80%;
 }
 .card-img-top{
     width: 140px;
@@ -717,10 +745,14 @@ textarea.form-control{
     top: 0;
     object-fit: cover;
     width: 100%;
-    height: 140vh;
+    height: 180vh;
     pointer-events: none;
     z-index: -1;
     filter: brightness(0.2);
+}
+.map-wrapper{
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 /*Footer*/
@@ -793,9 +825,7 @@ textarea.form-control{
     .banner-content h3{
         margin-left: 9%;
     }
-    .contact-banner img{
-        height: 145%;
-    }
+
 }
 
 

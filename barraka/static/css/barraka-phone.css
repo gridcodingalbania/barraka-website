@@ -225,13 +225,16 @@
     }
     .contact-banner img{
         width: 100%;
-        height: 230vh !important;
+        height: 300vh !important;
     }
     .form-control{
         width: 100%;
     }
     .submit-btn{
         width: 100%;
+    }
+    .map-wrapper iframe{
+        width: 100% !important;
     }
     /*Privacy and Terms Page*/
     .page-title h2{

@@ -139,7 +139,9 @@
         height:110vh;
     }
 
-
+    .map-wrapper iframe{
+        width: 700px;
+    }
     /*About Page*/
 
     .about-second-content-row{

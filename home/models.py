@@ -27,15 +27,12 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
     )
 
-    homePage_second_Title = models.CharField(max_length=200, null=True, blank=True)
-    homePage_second_subTitle = models.CharField(max_length=200,null=True,blank=True)
- 
-    reel_content = StreamField([
-    ('Reels', blocks.StructBlock([
-        ('reel_video_id', blocks.CharBlock()),
-        ('reel_video_target', blocks.CharBlock()),
-        ('reel_video_image', ImageChooserBlock(required=False)),
-        ('reel_video_link', blocks.CharBlock()),
+    homePage_services_title = models.CharField(max_length=200, null=True, blank=True)
+    homePage_services_subTitle = models.CharField(max_length=200, null=True, blank=True)
+    homePage_services_content = StreamField([
+    ('Card', blocks.StructBlock([
+        ('card_image', ImageChooserBlock(required=False)),
+        ('card_title',blocks.CharBlock()),
     ]))
     ],null=True,blank=False)
 
@@ -50,25 +47,12 @@ class HomePage(Page):
         on_delete=models.SET_NULL,
     )
 
-    reels_big_video_id = models.CharField(max_length=200,null=True,blank=True)
-    reels_big_video_image = models.ForeignKey(
-        "wagtailimages.Image",
-        null=True,
-        blank=False,
-        related_name="+",
-        on_delete=models.SET_NULL,
-    )
-    reels_big_video_target = models.CharField(max_length=200,null=True,blank=True)
-    reels_big_video_link = models.CharField(max_length=1000,null=True,blank=True)
 
-    portfolio_content = StreamField([
-    ('Portfolio', blocks.StructBlock([
-        ('portfolio_video_id',blocks.CharBlock()),
-        ('portfolio_video_target',blocks.CharBlock()),
-        ('portfolio_video_image', ImageChooserBlock(required=False)),
-        ('portfolio_video_link', blocks.CharBlock()),
-        ('portfolio_video_title',blocks.CharBlock()),
-        ('portfolio_video_description',blocks.RichTextBlock()),
+    reels_content = StreamField([
+    ('Reels', blocks.StructBlock([
+        ('reel_image', ImageChooserBlock(required=False)),
+        ('reel_link', blocks.CharBlock()),
+        ('reel_title',blocks.CharBlock()),
     ]))
     ],null=True,blank=False)
 
@@ -82,6 +66,9 @@ class HomePage(Page):
         related_name="+",
         on_delete=models.SET_NULL,
     )
+ 
+
+   
 
     homePage_partners_title = models.CharField(max_length=200, null=True, blank=True)
     homePage_partners_subtitle = models.CharField(max_length=200, null=True, blank=True)
@@ -101,18 +88,14 @@ class HomePage(Page):
         FieldPanel("homePage_first_subTitle"),
         FieldPanel("homePage_first_description"),
         ImageChooserPanel("homePage_first_Image"),
-        FieldPanel("homePage_second_Title"),
-        FieldPanel("homePage_second_subTitle"),
-        FieldPanel("reels_big_video_id"),
-        ImageChooserPanel("reels_big_video_image"),
-        FieldPanel("reels_big_video_target"),
-        FieldPanel("reels_big_video_link"),
-        StreamFieldPanel("reel_content"),
+        FieldPanel("homePage_services_title"),
+        FieldPanel("homePage_services_subTitle"),
+        StreamFieldPanel("homePage_services_content"),
         FieldPanel("homePage_third_Title"),
         FieldPanel("homePage_third_subTitle"),
         FieldPanel("homePage_third_description"),
         ImageChooserPanel("homePage_third_Image"),
-        StreamFieldPanel("portfolio_content"),
+        StreamFieldPanel("reels_content"),
         FieldPanel("homePage_fourth_Title"),
         FieldPanel("homePage_fourth_subTitle"),
         FieldPanel("homePage_fourth_description"),

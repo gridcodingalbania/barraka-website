@@ -3,14 +3,78 @@
 {% block content %}
 <div class="banner">
 <video autoplay loop muted>
-        <source src="/media/videos/TestVideo.mp4" type="video/mp4">
+        <source src="/media/videos/video.mp4" type="video/mp4">
 </video>
 <div class="banner-content">
     <h3>{{ self.banner_text }} <span class="video-colored-text">{{ self.colored_banner_text }}</span> {{self.banner_text_after_colored}}</h3>
 </div>
 </div>
 
+<div class="home-portfolio" id="portfolio">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="left-home">
+                <h2 class="home-title">{{ self.homePage_third_Title }}</h2>
+                <h3 class="home-subtitle">{{ self.homePage_third_subTitle }}</h3>
+                <div class="home_text">{{ self.homePage_third_description|richtext }}</div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="home-image">
+                    {% image self.homePage_third_Image scale-100 as img %}
+                    <img src="{{img.url}}" alt={{img.alt}} width="220px" class="about_img">
+                </div>
+            </div>
+        </div>
+        <div class="pt-5 portfolio_videos">
+            <div class="row">
+                {% for block in page.reels_content %}
+                {% if block.block_type == 'Reels' %}
+                    <div class="col-lg-6 about-images">
+                        {% image block.value.reel_image scale-100 as img %}
+                        <a href={{ block.value.reel_link }}><img src="{{ img.url }}" alt="{{img.alt}}"></a>
+                        <div class="centered">
+                            <div class="center-title">
+                                <h3 class="text-center">{{ block.value.reel_title }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %} 
+        </div>
+        </div>
+</div>
 
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="left-home">
+                <h2 class="home-title">{{ self.homePage_services_title }}</h2>
+                <h3 class="home-subtitle">{{ self.homePage_services_subTitle }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row services-row pt-5">
+        {% for block in page.homePage_services_content %}
+            {% if block.block_type == "Card" %}
+            <div class="col-lg-4 card-col">
+                <div class="card">
+                    {% image block.value.card_image scale-100 as img %}
+                    <img src="{{ img.url }}" alt="img.alt" class="services-card">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ block.value.card_title }}</h5>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+        <div class="see-more-btn pt-5" style="margin:0 auto;">
+            <a href="#" class="btn more-btn">See More</a>
+        </div>
+    </div>
+</div>
 
 <div class="home_about" id="about">
     <div class="container-fluid">
@@ -37,158 +101,6 @@
     </div>
 </div>
 
-<div class="home_reel" id="home_reel">
-    <div class="container">
-        <div class="reel-title text-center">
-            <h2>{{ self.homePage_second_Title }}</h2>
-            <div class="reel-subtitle">
-                <h3>{{ self.homePage_second_subTitle }}</h3>
-            </div>
-            <div class="reel-video">
-                {% image self.reels_big_video_image scale-100 as img %}
-                <img src="{{ img.url }}" alt="{{ img.alt }}" class="reel-video-image">
-                    <div class="play-button-wrapper">
-                        <div title="Play video" class="play-gif" id="circle-play-b">
-                            <img src="/media/original_images/playbutton.png" class="play-button" data-toggle="modal" data-target="{{ self.reels_big_video_target }}">
-                        </div>
-                    </div>
-            </div>
-            <div class="modal fade" id="{{self.reels_big_video_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="col-md-4 ml-auto">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true" style="color:white;">&times;</span>
-                        </button>
-                        </div>
-                    </div>
-                    <div class="modal-body text-center">
-                        <iframe width="560" height="315" src="{{ self.reels_big_video_link }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        
-        <div class="row">
-            {% for block in page.reel_content %}
-                {% if block.block_type == "Reels" %}
-                    <div class="col-lg-6">
-                        <div class="reel-video">
-                            {% image block.value.reel_video_image scale-100 as img %}
-                            <img src="{{ img.url }}" alt="{{ img.alt }}" class="reel-video-sub-image">
-
-                            <div class="play-button-wrapper">
-                                <div title="Play video" class="play-gif" id="circle-play-b">
-                                    <img src="/media/original_images/playbutton.png" class="play-button" data-toggle="modal" data-target={{ block.value.reel_video_target }}>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal fade" id={{block.value.reel_video_id}} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <div class="col-md-4 ml-auto">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true" style="color:white;">&times;</span>
-                                    </button>
-                                    </div>
-                                </div>
-                                <div class="modal-body text-center">
-                                    <iframe width="350" height="500" src={{block.value.reel_video_link}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        
-        <div class="row">
-            <div class="col-lg-12 text-center pt-5">
-                <div class="see-more-btn">
-                    <a href="/showreel/commercials" class="btn more-btn">See More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-
-<div class="home-portfolio" id="portfolio">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="left-home">
-                <h2 class="home-title">{{ self.homePage_third_Title }}</h2>
-                <h3 class="home-subtitle">{{ self.homePage_third_subTitle }}</h3>
-                <div class="home_text">{{ self.homePage_third_description|richtext }}</div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <div class="home-image">
-                    {% image self.homePage_third_Image scale-100 as img %}
-                    <img src="{{img.url}}" alt={{img.alt}} width="220px" class="about_img">
-                </div>
-            </div>
-        </div>
-        <div class="pt-5 portfolio_videos">
-        <div class="row portfolio-videos-row">
-            {% for block in page.portfolio_content %}
-                {% if block.block_type == 'Portfolio' %}
-                    <div class="col-lg-4">
-                        <div class="reel-video">
-                            {% image block.value.portfolio_video_image scale-100 as img %}
-                            <img src="{{img.url}}" alt="{{img.alt}}" class="reel-video-portfolio-image">
-
-                            <div class="play-button-wrapper">
-                                <div title="Play video" class="play-gif" id="circle-play-b">
-                                    <img src="/media/original_images/playbutton.png" class="play-button" data-toggle="modal" data-target={{block.value.portfolio_video_target}}>
-                                </div>
-                            </div>
-                        </div>
-            
-                        <div class="video-title">
-                            <h2>{{ block.value.portfolio_video_title }}</h2>
-                        </div>
-                        <div class="video-description">
-                            <p>{{ block.value.portfolio_video_description }}</p>
-                        </div>
-
-                        <div class="modal fade" id={{block.value.portfolio_video_id}} tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <div class="col-md-4 ml-auto">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick>
-                                      <span aria-hidden="true" style="color:white;">&times;</span>
-                                    </button>
-                                    </div>
-                                </div>
-                                <div class="modal-body text-center">
-                                    <iframe width="800" height="500" src={{block.value.portfolio_video_link}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-center pt-5">
-                <div class="see-more-btn">
-                    <a href="/showreel/documentaries" class="btn more-btn">See More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
 
 <div class="home-contact" id="contact">
