@@ -18,6 +18,7 @@ class HomePage(Page):
 
     homePage_first_Title = models.CharField(max_length=200, null=True, blank=True)
     homePage_first_subTitle = models.CharField(max_length=200,null=True,blank=True)
+    homePage_first_secondSubTitle = models.CharField(max_length=200,null=True,blank=True)
     homePage_first_description = RichTextField(null=True, blank=False)
     homePage_first_Image = models.ForeignKey(
         "wagtailimages.Image",
@@ -86,6 +87,7 @@ class HomePage(Page):
         FieldPanel("banner_text_after_colored"),
         FieldPanel("homePage_first_Title"),
         FieldPanel("homePage_first_subTitle"),
+        FieldPanel("homePage_first_secondSubTitle"),
         FieldPanel("homePage_first_description"),
         ImageChooserPanel("homePage_first_Image"),
         FieldPanel("homePage_services_title"),

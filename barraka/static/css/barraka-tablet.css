@@ -8,7 +8,7 @@
         color: white;
         position: fixed;
         width: 100%;
-        z-index: 1;
+        z-index: 999;
     }
     .navbar-mid{
         display: none;
@@ -149,6 +149,9 @@
     }
     .left-about{
         width: 700px;
+    }
+    .about-images{
+        width: 50%;
     }
     .about-image img{
         /* margin-left: 220px !important;

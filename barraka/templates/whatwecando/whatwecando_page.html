@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% block content %}
+<div class="about_header">
+    <div class="container">
+        <div class="text-center header-wrapper">
+            <div class="about-title">
+                <h2>{{ self.page_title }}</h2>
+            </div>
+            <div class="about-subtitle">
+                <h5>{{ self.page_subtitle }}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="other-services">
+    <div class="container">
+        <div class="other-services-header">
+            <h2>{{ self.page_second_title }}</h2>
+        </div>
+        <div class="row about-other-services-row">
+            {% for block in page.cards_content %}
+                {% if block.block_type == "cards" %}
+                    <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2 col-xl-4 other-card-col">
+                        <div class="card other-card">
+                            {% image block.value.cards_image scale-100 as img %}
+                            <img src="{{ img.url }}" alt="img.alt" class="card-img-top">
+                            <div class="card-body text-center">
+                                <h5 class="card-title other-card-title">{{ block.value.cards_title }}</h5>
+                                <p class="card-text other-card-txt">{{ block.value.cards_description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}   
+        </div>
+    </div>
+
+</section>
+{% endblock %}

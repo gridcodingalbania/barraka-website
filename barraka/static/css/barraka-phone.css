@@ -71,6 +71,9 @@
     .home-subtitle{
         font-size: 25px;
     }
+    .home-contact::before{
+        background-size: cover;
+    }
     .about_img{
         /* width: 200px; */
         display: none;
@@ -87,6 +90,9 @@
     
     .see-more-btn{
         text-align: center;
+    }
+    .centered .center-title h3{
+        font-size: 15px;
     }
     /* .portfolio_videos{
         display: none;
@@ -135,6 +141,9 @@
         width: 200px;
         text-align: center;
         display: none;
+    }
+    .about-images img{
+        height: 200px;
     }
     .services-row{
         padding-left: 0;

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap'); /* PLayfair Display Font*/
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap'); /*Source Sans Pro*/
-
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 html{
     scroll-behavior: smooth;
 }
@@ -123,9 +125,10 @@ top: 20px;
     display: none;
 }
 .navbar-mid{
-    width: 50%;
+    width: 100%;
     text-align: center;
-    margin-right: 13%;
+    /* margin-right: 13%; */
+    transform: translateX(-40%);
 }
 .navbar-mid img{
     width: 30%;
@@ -133,6 +136,10 @@ top: 20px;
 
 .navbar .nav-link{
     color: white;
+    font-size: 16px;
+}
+.navbar-nav{
+    width: 100%;
 }
 .dropdown-toggle::after{
     color:#DE9E48;
@@ -265,8 +272,8 @@ top: 20px;
 }
 .home_text p{
     width: 100%;
-    font-size: 20px;
-    line-height: normal;
+    font-size: 17px;
+    line-height: 15px;
 }
 .home-subtitle{
     font-size: 35px;
@@ -335,7 +342,7 @@ top: 20px;
 .play-button-wrapper {
 	position: absolute;
 	left: 0;
-    top: 0;
+    top: 50px;
 	right: 0;
 	bottom: 0;
 	display: flex;
@@ -363,6 +370,13 @@ top: 20px;
     border-radius: 50%;
     opacity: 0.9;
 }
+.play-button:hover{
+    -webkit-animation:spin 4s linear;
+    -moz-animation:spin 4s linear ;
+    animation:spin 1s ease-in-out;
+    animation-iteration-count: 100;
+    animation-duration: 2s;
+}
 .modal-content{
     background: transparent !important;
     border: none !important;
@@ -377,8 +391,7 @@ top: 20px;
 .reel-video-sub-image{
     width: 100%;
     margin-top: 20px;
-    height: 350px;
-    
+    height: 250px;
 }
 .video-title h2{
     padding-top: 15px;
@@ -406,6 +419,7 @@ top: 20px;
     content:"";
     background-image:url("/media/original_images/FOTOO-01.jpg");
     background-size:100% 100%;
+    background-repeat: no-repeat;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -415,7 +429,7 @@ top: 20px;
 }
 .reel-video-portfolio-image{
     width: 100%;
-    /* height: 300px; */
+    height: auto;
 }
 .portfolio_videos{
     width: 80%;
@@ -424,7 +438,7 @@ top: 20px;
 /*Test*/
 .about-images img{
     width: 100%;
-    height: 400px;
+    height: 450px;
     object-fit: cover;
     filter: brightness(0.6);
     margin-bottom: 50px;
@@ -505,6 +519,17 @@ top: 20px;
 }
 /*End of home partners carousel*/
 
+/*What we can do*/
+.card-body ul li {
+    color:black;
+    text-align: left;
+    margin: 0 auto;
+    list-style-image: url("/media/images/polygon.png");
+}
+/* .card-body ul li::marker{
+    list-style-image: url("/media/images/polygon.png");
+} */
+
 /*About Page*/
 .about_header{
     position: relative;
@@ -571,6 +596,7 @@ top: 20px;
 .about-description p{
     width: 110%;
     font-size: 30px;
+
 }
 .about-services-row{
     justify-content: center;
@@ -613,7 +639,7 @@ top: 20px;
     width: 140px;
     margin: 0 auto;
     padding-top: 50px;
-    height: 160px;
+    /* height: 160px; */
 }
 .other-services{
     background-color: white;
@@ -632,6 +658,7 @@ top: 20px;
     background-color:#F6F6F6;
     border-style: none;
     padding-bottom: 50px;
+    height: 500px;
     width: 100%;
 }
 .other-card-txt{
@@ -673,7 +700,9 @@ top: 20px;
 .detail-big-image-title{
     color:white;
 }
-
+.details-row{
+    margin-bottom: 50px;
+}
 /*Contact Page */
 .contact-row{
     padding-bottom: 100px;
@@ -745,7 +774,7 @@ textarea.form-control{
     top: 0;
     object-fit: cover;
     width: 100%;
-    height: 180vh;
+    height: 180vh !important;
     pointer-events: none;
     z-index: -1;
     filter: brightness(0.2);
@@ -754,7 +783,9 @@ textarea.form-control{
     margin: 0 auto;
     margin-top: 50px;
 }
-
+.map-wrapper iframe{
+    filter: invert(90%);
+}
 /*Footer*/
 
 .page-footer{
@@ -785,7 +816,9 @@ textarea.form-control{
 .contact_footer i{
     padding-right: 2px;
 }
-
+.footer_row h6{
+    font-size: 15px;
+}
 /*Privacy and Terms Page*/
 .page-title h2{
     font-size: 45px;
@@ -828,4 +861,22 @@ textarea.form-control{
 
 }
 
+@media only screen and (max-width:2560px){
+    .contact-banner img{
+        height: 250vh ;
+    }
+    .white-about-title h2{
+        font-size: 35px;
+    }
+    .home-subtitle{
+        font-size: 25px;
+    }
+    .about-images img{
+        width: 100%;
+        height: 300px;
+    }
+    .reel-video-sub-image{
+        height: auto !important;
+    }
+}
 

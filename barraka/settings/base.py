@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'contact',
     'privacy',
     'terms',
+    'whatwecando',
     'search',
 
     'wagtail.contrib.forms',
