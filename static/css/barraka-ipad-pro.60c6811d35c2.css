@@ -3,7 +3,16 @@
     li.nav-item::marker{
         color: transparent;
     }
+    .navbar-nav{
+        width: 150%;
+    }
+    .navbar-mid{
+        transform: unset;
+    }
     /*Banner*/
+    .banner{
+        height: 100vh;
+    }
     .banner-content h3{
         font-size: 32px;
         padding-bottom: 20px;
@@ -52,9 +61,14 @@
     }
     .reel-video-portfolio-image{
         width: 100%;
-        height: 300px;
+        height: auto;
     }
-
+    /* .home-contact{
+        height: auto;
+    } */
+    .owl-carousel .owl-item img{
+        margin-left: 30px;
+    }
     /*Footer*/
     .row-fixer{
         display: flex !important;
@@ -68,6 +82,7 @@
     }
     .footer_text{
         padding-left: unset;
+        font-size: 14px;
     }
 
     /*Details Page*/
@@ -80,9 +95,11 @@
     /*Contact Page*/
 
     .contact-banner img{
-        height: 110vh;
+        height: 200vh;
     }
-
+    .contact-subtitle{
+        padding-top:50px;
+    }
 
     /*About Page*/
 
@@ -132,7 +149,13 @@
     }
     .card{
         width: 100%;
-        height: 500px;
+       
+    }
+    .card-img-top{
+        height: 35%;
+    }
+    .card-body ul li{
+        font-size: 11px;
     }
 }
 

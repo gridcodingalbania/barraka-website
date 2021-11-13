@@ -71,6 +71,9 @@
     .home-subtitle{
         font-size: 25px;
     }
+    .home-contact::before{
+        background-size: cover;
+    }
     .about_img{
         /* width: 200px; */
         display: none;
@@ -87,6 +90,9 @@
     
     .see-more-btn{
         text-align: center;
+    }
+    .centered .center-title h3{
+        font-size: 15px;
     }
     /* .portfolio_videos{
         display: none;
@@ -135,6 +141,9 @@
         width: 200px;
         text-align: center;
         display: none;
+    }
+    .about-images img{
+        height: 200px;
     }
     .services-row{
         padding-left: 0;
@@ -210,22 +219,31 @@
         text-align: left;
     }
     .copyright-text{
-        background-color: grey;
+        background-color:#1A1A1A;
         color: white;
         padding: 0;
         transform: translateX(-15px);
-        width: 110%;
+        width: 100%;
+    }
+    .owl-carousel .owl-item img{
+       margin:0 auto !important;
     }
     /*Contact Page*/
+    .contact-row{
+        padding-top: 100px;
+    }
     .contact-banner img{
         width: 100%;
-        height: 150vh !important;
+        height: 300vh !important;
     }
     .form-control{
         width: 100%;
     }
     .submit-btn{
         width: 100%;
+    }
+    .map-wrapper iframe{
+        width: 100% !important;
     }
     /*Privacy and Terms Page*/
     .page-title h2{
@@ -246,6 +264,9 @@
     }
     .content-wrapper p{
         font-size: 20px;
+    }
+    .contact-subtitle{
+        padding-top: 50px;
     }
 }
 
