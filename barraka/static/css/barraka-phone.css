@@ -78,10 +78,12 @@
         /* width: 200px; */
         display: none;
     }
+
     .home_text p{
         width: 100% !important;
         font-size: 20px !important;
         text-align: justify;
+        line-height: 25px;
     }
     .portfolio_videos{
         margin-left: 0 !important;

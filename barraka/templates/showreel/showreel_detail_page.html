@@ -22,7 +22,7 @@
                     {% if block.block_type == "Detail" %}
                 <div class="col-lg-4">
                     <div class="reel-video">
-                        {% image block.value.detail_video_image scale-100 as img %}
+                        {% image block.value.detail_video_image fill-1000x560 as img %}
                         <img src="{{img.url}}" alt="{{img.alt}}" class="reel-video-portfolio-image">
 
                         <div class="play-button-wrapper">
