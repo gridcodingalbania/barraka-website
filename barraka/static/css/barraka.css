@@ -13,20 +13,20 @@
         text-decoration: none;
     }
     h1{
-        font-family: 'Playfair  Displa', serif !important;
+        font-family: 'Playfair  Display', serif !important;
         font-weight: bold;
 
     }
     h2{
-        font-family: 'Playfair  Displa', serif !important;
+        font-family: 'Playfair  Display', serif !important;
         font-weight: bold;
     }
     h3{
-        font-family: 'Playfair  Displa', serif !important;
+        font-family: 'Playfair  Display', serif !important;
         font-weight: bold;
     }
     h4{
-        font-family: 'Playfair  Displa', serif !important;
+        font-family: 'Playfair  Display', serif !important;
         font-weight: bold;
 
     }
@@ -35,7 +35,7 @@
         font-weight: bold;
     }
     h6{
-        font-family: 'Playfair  Displa', serif !important;
+        font-family: 'Playfair  Display', serif !important;
 
     }
     p{
@@ -125,7 +125,7 @@
         display: none;
     }
     .navbar-mid{
-        width: 100%;
+        width: 80%;
         text-align: center;
         /* margin-right: 13%; */
         transform: translateX(-40%);
@@ -261,6 +261,8 @@
     .home-title{
         font-size: 30px !important;
         padding-bottom: 30px;
+        font-family: 'Source Sons Pro',sans-serif !important;
+        font-weight: bold;
     }
     .home-title::after{
     content: "";
@@ -268,7 +270,7 @@
     border-bottom: 1px solid white;
     width: 10%;
     position: relative;
-    bottom: -6px;
+    bottom: -15px;
     }
     .home_text p{
         width: 100%;
@@ -293,6 +295,9 @@
     .home-title{
         color: #DE9E48;
         font-size: 50px;
+    }
+    .see-more-btn{
+        margin-top: 50px;
     }
     .more-btn{
         border-color: #DE9E48;
@@ -576,6 +581,7 @@
     .about-image img{
         margin-left: 45%;
         margin-top: 20%;
+        width: 250px;
     }
     .about-description-second{
         width: 100%;
@@ -670,6 +676,7 @@
     .other-card-title{
         color: black;
         text-transform: uppercase;
+        font-family:'Playfair  Display', serif !important;;
     }
     /*Detail Page*/
     .detail-title{
@@ -843,7 +850,9 @@
     .content-wrapper p{
         font-size: 18px;
     }
-
+    .cpy-text{
+        font-family: 'Playfair  Display', serif !important;
+    }
 
     @media only screen and (max-width:1440px){
         li.nav-item::marker{
@@ -860,6 +869,9 @@
         } */
         .banner-content h3{
             margin-left: 9%;
+        }
+        .navbar-mid{
+            transform: translateX(-25%);
         }
 
     }
