@@ -69,7 +69,7 @@
         font-size: 15px;
     }
     .home-subtitle{
-        font-size: 25px;
+        font-size: 16px !important;
     }
     .home-contact{
         padding-top: unset;
@@ -159,6 +159,9 @@
         padding-left: 0;
         padding-right: 0;
 
+    }
+    .other-services-header h2{
+        font-size: 17px;
     }
     .card-col{
         padding-bottom: 50px;
