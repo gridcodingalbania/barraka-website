@@ -127,10 +127,26 @@
 
     /*About Page*/
     .about_header{
+        padding-top: 100px;
+        object-fit: cover;
         height: unset;
     }
+    .about_header::before{
+        margin-top: 80px;
+    }
+    .whatwecan_header{
+        padding-top: 80px;
+        object-fit: cover;
+        height: unset;
+    }
+    .whatwecan_header::before{
+        margin-top:80px;
+    }
     .about-title h2{
-        font-size: 35px;
+        font-size: 21px;
+    }
+    .about-subtitle h5{
+        font-size: 11px;
     }
     .white-about-title h2{
         font-size: 18px;

@@ -533,6 +533,27 @@ bottom: -15px;
 /*End of home partners carousel*/
 
 /*What we can do*/
+.whatwecan_header{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+.whatwecan_header::before{
+    content:"";
+    background-image:url("/media/original_images/whatwecan_header.jpg");
+    background-size:100% 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    filter: brightness(0.6);
+    object-fit: cover;
+}
 .card-body ul li {
     color:black;
     text-align: left;
@@ -554,14 +575,14 @@ bottom: -15px;
 }
 .about_header::before{
     content:"";
-    background-image:url("/media/original_images/camera.jpg");
+    background-image:url("/media/original_images/about_us_header.jpg");
     background-size:100% 100%;
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    filter: brightness(0.2);
+    filter: brightness(0.6);
 }
 
 .header-wrapper{
