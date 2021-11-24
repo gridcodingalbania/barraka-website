@@ -535,12 +535,14 @@ bottom: -15px;
 /*What we can do*/
 .whatwecan_header{
     position: relative;
-    height: 600px;
+    height: 700px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     object-fit: cover;
+    margin-top:-110px;
+    z-index: -1;
 }
 .whatwecan_header::before{
     content:"";
@@ -567,11 +569,13 @@ bottom: -15px;
 /*About Page*/
 .about_header{
     position: relative;
-    height: 600px;
+    height: 700px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top:-110px;
+    z-index: -1;
 }
 .about_header::before{
     content:"";

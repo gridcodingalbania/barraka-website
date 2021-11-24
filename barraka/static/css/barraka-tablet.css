@@ -60,6 +60,9 @@
 
     /*Home page*/
      /*Home Page*/
+    .centered{
+        top:45%;
+    }
      .navbar-social-home{
         display: flex;
         flex-direction: column;
@@ -188,7 +191,23 @@
     .card{
         width: unset;
     }
-
+    .about_header{
+        margin-top:unset;
+        z-index:unset;
+    }
+    .about_header::before{
+        margin-top:80px;
+    }
+    .whatwecan_header{
+        padding-top: 80px;
+        object-fit: cover;
+        height: unset;
+        margin-top:unset;
+        z-index:unset;
+    }
+    .whatwecan_header::before{
+        margin-top:80px;
+    }
     /*Modals*/
     .modal-body iframe{
         width: 500px;

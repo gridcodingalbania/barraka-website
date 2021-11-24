@@ -87,8 +87,9 @@
     .home_text p{
         width: 100% !important;
         font-size: 20px !important;
-        text-align: justify;
+        /*text-align: justify;*/
         line-height: 25px;
+        margin-bottom: 5px;
     }
     .portfolio_videos{
         margin-left: 0 !important;
@@ -100,6 +101,9 @@
     }
     .see-more-btn{
         text-align: center;
+    }
+    .centered{
+        top:40% !important;
     }
     .centered .center-title h3{
         font-size: 15px;
@@ -129,15 +133,29 @@
     .about_header{
         padding-top: 100px;
         object-fit: cover;
-        height: unset;
+        height: 33vh;
+        margin-top:unset;
+        z-index: unset;
     }
     .about_header::before{
         margin-top: 80px;
     }
+    .about-second-content{
+        padding-bottom: unset;
+        margin-top: -40px;
+    }
+    .about-services::before{
+        background-size: cover;
+    }
     .whatwecan_header{
         padding-top: 80px;
         object-fit: cover;
-        height: unset;
+        height: 33vh;
+        margin-top:unset;
+        z-index:unset;
+    }
+    .card-img-top{
+        width: 100px;
     }
     .whatwecan_header::before{
         margin-top:80px;
@@ -168,16 +186,26 @@
         text-align: center;
         display: none;
     }
+    .about-images{
+        width: 100% !important;
+    }
     .about-images img{
-        height: 150px;
+        height: fit-content ;
     }
     .services-row{
         padding-left: 0;
         padding-right: 0;
 
     }
+    .other-services-header{
+        margin-bottom: 0;
+    }
     .other-services-header h2{
         font-size: 17px;
+    }
+    .other-services{
+        padding-top:50px;
+        padding-bottom: 50px;
     }
     .card-col{
         padding-bottom: 50px;
@@ -218,6 +246,7 @@
     }
     .other-card{
         width: 100% !important;
+        height: fit-content;
     }
     /*Details Page*/
     .details-wrapper{
@@ -295,7 +324,11 @@
         font-size: 20px;
     }
     .contact-subtitle{
-        padding-top: 50px;
+        padding-top: 10px !important;
+        margin-bottom: 20px;
+    }
+    .page-title{
+        padding-top: 100px;
     }
 }
 
